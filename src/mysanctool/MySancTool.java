@@ -66,14 +66,30 @@ public class MySancTool extends Application {
          * This is necessary. Without it you may have only one scene within the container which maximizes the login field to the current screen size.
          */
         VBox header = new VBox();
-        
+        VBox rightSide = new VBox();
+        VBox leftSide = new VBox();
+        VBox bottom = new VBox();
+
+
         header.setPrefHeight(25);
         header.setId("cssHeader");
-        
-        
+
+        rightSide.setPrefHeight(25);
+        rightSide.setId("cssRightSide");
+
+        leftSide.setPrefHeight(25);
+        leftSide.setId("cssLeftSide");
+
+        bottom.setPrefHeight(25);
+        bottom.setId("cssBottom");
+
         
         iContainTheLoginContainer.setTop(header);
-        
+        iContainTheLoginContainer.setRight(rightSide);
+        iContainTheLoginContainer.setLeft(leftSide);
+        iContainTheLoginContainer.setBottom(bottom);
+
+
         //maybe i need this one?
          /**
         loginContainer.setPrefSize(200, 200);
@@ -95,10 +111,10 @@ public class MySancTool extends Application {
                         new BorderStroke(
                                 Paint.valueOf("black"), 
                                 BorderStrokeStyle.SOLID, 
-                                CornerRadii.EMPTY, 
+                                new CornerRadii(5),
                                 BorderWidths.DEFAULT)));
         
-        Scene loginScene = new Scene(iContainTheLoginContainer, 350, 350);
+        Scene loginScene = new Scene(iContainTheLoginContainer, 325, 245);
         
         // set resource of css file in use for the starting window
         loginStage.setScene(loginScene);
@@ -164,7 +180,7 @@ public class MySancTool extends Application {
                 displayValues
                         .setHgap(10);
                 displayValues
-                        .setPadding(new Insets(5, 5, 5, 5));
+                        .setPadding(new Insets(5, 5, 20, 5));
                 
                 
                 if(typedInUserName.equals("") || typedInPassWord.equals("")) {
@@ -213,10 +229,11 @@ public class MySancTool extends Application {
         
         loginStage
                 .getIcons()
-                .add(icon);  
+                .add(icon);
+
+        loginStage.setResizable(false);
         
         loginStage.show();
-        
     }
 
     /**

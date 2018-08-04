@@ -10,7 +10,7 @@ and open the template in the editor.
 
 
 .root {
-    -fx-background-color:  black;
+    -fx-background-color:  white;
 }
 
 .label {
@@ -21,5 +21,17 @@ and open the template in the editor.
 }
 
 #cssHeader {
+    -fx-background-color: white;
+}
+
+#cssRightSide {
+    -fx-background-color: white;
+}
+
+#cssLeftSide {
+    -fx-background-color: white;
+}
+
+#cssBottom {
     -fx-background-color: white;
 }

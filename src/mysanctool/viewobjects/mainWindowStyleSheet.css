@@ -1,0 +1,80 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 06.08.2018, 21:22:47
+    Author     : Deniz Durak
+*/
+
+.root {
+    -fx-background-color: linear-gradient(#cccccc, #eeeeee);;
+}
+
+.button {
+    -fx-alignment: BOTTOM_CENTER;
+    -fx-background-color: #cccccc;
+    -fx-text-fill: black;
+    -fx-border-radius: 0;
+    -fx-stroke: black;
+    -fx-stroke-width: 5;
+    -fx-stroke-borders: solid;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 10, 0.0, 1, 1.5);
+}
+
+.button:hover {
+    -fx-background-color: #ccccdd;
+}
+
+.button:pressed {
+    -fx-effect: innershadow(three-pass-box, rgba(0,0,0,0.6), 5, 0.0, 0, 1);
+}
+
+#centerPane {
+    -fx-padding:10;
+    -fx-border-style: solid inside;
+    -fx-border-width: 2;
+    -fx-border-insets: 15;
+    -fx-border-color: -fx-text-box-border;
+    -fx-border-radius: 5;
+    -fx-effect: dropshadow(two-pass-box, rgba(0, 0, 0, 0.6), 15, 0.0, 1, 1.5);
+    -fx-background-color: linear-gradient(#cccccc, #eeeeee);
+}
+
+#insertSanctionButton {
+    -fx-background-image: url("icons/writing.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: top;
+}
+
+#searchForSanctionButton {
+    -fx-background-image: url("icons/loupe.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: top;
+}
+
+#lookForLogsButton {
+    -fx-background-image: url("icons/readIcon.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: top;
+}
+
+#createNewUserButton {
+    -fx-background-image: url("icons/create.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: top;
+}
+
+#adminUserButton {
+    -fx-background-image: url("icons/manager.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: top;
+}
+
+#titleStyle {
+    -fx-padding: 0 0 0 4;
+    -fx-background-color: -fx-background;
+    -fx-translate-y: -17;
+    -fx-text-fill: red;
+}
